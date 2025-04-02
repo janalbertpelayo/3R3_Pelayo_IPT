@@ -1,0 +1,5 @@
+/* ...existing code... */
+.italic-placeholder::placeholder {
+    font-style: italic;
+}
+/* ...existing code... */

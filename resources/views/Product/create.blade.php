@@ -3,10 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Create Product</title>
 </head>
 <body>
-    <h1>Create a Product</h1>
+    <h1>Add a Product</h1>
     <div>
         @if($errors->any())
             <ul>

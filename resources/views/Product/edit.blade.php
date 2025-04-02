@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Edit Product</title>
 </head>
 <body>
     <h1>Edit a Product</h1>
@@ -14,9 +14,6 @@
                     <li>{{ $error }}</li>
                 @endforeach
             </ul>
-
-
-            
         @endif
     </div>
     <form method="post" action="{{ route('product.update', ['product' => $product])}}">
@@ -24,19 +21,19 @@
         @method('put')
         <div>
             <label>Name</label>
-            <input type="text" name="name" placeholder="Name">
+            <input type="text" name="name" placeholder="{{ $product->name }}" value="{{ $product->name }}">
         </div>
         <div>
             <label>Qty</label>
-            <input type="text" name="qty" placeholder="Qty">
+            <input type="text" name="qty" placeholder="{{ $product->qty }}" value="{{ $product->qty }}">
         </div>
         <div>
             <label>Price</label>
-            <input type="text" name="price" placeholder="Price">
+            <input type="text" name="price" placeholder="{{ $product->price }}" value="{{ $product->price }}">
         </div>
         <div>
             <label>Description</label>
-            <input type="text" name="description" placeholder="Description">
+            <input type="text" name="description" placeholder="{{ $product->description }}" value="{{ $product->description }}">
         </div>
         <div>
             <input type="submit" value="Update">
